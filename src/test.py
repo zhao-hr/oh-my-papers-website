@@ -22,7 +22,7 @@ async def run(websocket, path):
 
 def recommendation(input):
     if input == "resnet":
-        return "Deep Residual Learning for Image Recognition\n" * 100
+        return "Deep Residual Learning for Image Recognition"
     else:
         return "Other Papers"
 
