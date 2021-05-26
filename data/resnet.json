@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Deep Residual Learning for Image Recognition",
+        "author": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun",
+        "venue": "CVPR",
+        "year": "2016",
+        "abstract": "Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicityly reformulate the layers as learning residual function with ..."
+    },
+    
+    {
+        "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
+        "author": "Christain Szegedy, S. loffe, V. Vanhoucke, Alexander Amir Alemi",
+        "venue": "AAAI",
+        "year": "2016",
+        "abstract": "We study the combination of the tow most recent ideas: Residual connections introduced by He et al. in [5] and the latest revised version of the inception architecture."
+    }
+] 
