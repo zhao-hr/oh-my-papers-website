@@ -1,6 +1,6 @@
 # oh-my-papers-website
 
-This is one front-end completion of "Oh My Papers".
+This is a front-end completion of "Oh My Papers".
 
 You can test the program locally through "PHPStudy". For example, you may create a local website with a domain name "www.ohmypapers.com" in "PHPStudy". Put all the files from this repo in your local path "/phpstudy/WWW/www.ohmypapers.com/".
 
