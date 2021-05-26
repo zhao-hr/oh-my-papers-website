@@ -1,5 +1,6 @@
 import asyncio
 import websockets
+import json
 
 input = ""
 
@@ -22,9 +23,17 @@ async def run(websocket, path):
 
 def recommendation(input):
     if input == "resnet":
-        return "Deep Residual Learning for Image Recognition"
+        with open('data/resnet.json', 'r') as f:
+            obj = json.load(f)
+        obj = json.dumps(obj)
+        print(obj)
+        return obj
     else:
-        return "Other Papers"
+        with open('data/ohmypaper.json', 'r') as f:
+            obj = json.load(f)
+        obj = json.dumps(obj)
+        print(obj)
+        return obj
 
 
 if __name__ == '__main__':
