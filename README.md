@@ -14,7 +14,7 @@ Then type "www.ohmypapers.com" in your browser, and you will be able to use this
 
 ![img](img/test.png)
 
-In the above example, the front-end send a string "resnet" to the back-end.
+In the above example, the front-end sends a string "resnet" to the back-end.
 
 And the front-end should receive a string from the back-end in the format as follows:
 
