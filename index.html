@@ -12,19 +12,23 @@
 	</head>
 
 	<body>
-		<h1>Oh My Papers</h1>
+		<h1>
+			<img src="img/icon_book_left.jpeg" alt="" width="24px">
+			&nbsp Oh My Papers &nbsp;
+			<img src="img/icon_book_right.jpeg" alt="" width="24px">
+		</h1>
+		<h3>A Hybrid Context-aware Paper Recommendation System</h3>
 		<br>
 		<div>
-			<input id="input" placeholder="Your Context Here"></input>
+			<input id="input" placeholder=" Your Context Here"></input>
 			<button id="button">Search</button>
 		</div>
-
-		<br>
 		
 		<div>
 			<h2>Papers Recommended:</h2>
-			<textarea id="output"></textarea>
 		</div>
+
+		<div id="output" class="output" contenteditable="false"></div>
 
 		<script type="text/javascript" src="script.js"></script>
 	</body>
