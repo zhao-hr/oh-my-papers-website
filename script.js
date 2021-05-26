@@ -1,5 +1,10 @@
 console.log("Prgram Starts")
 
+document.getElementById("button").addEventListener("click", recommend);
+document.addEventListener("keypress", BindEnter)
+function BindEnter(obj){ 
+    if (obj.keyCode === 13) recommend()
+};
 
 var socket;
 var ws = new WebSocket("ws://127.0.0.1:10086/test");
@@ -14,13 +19,6 @@ ws.onmessage = function(evt) {
 };
 ws.onclose = function() {
     console.log('Connection Closed');
-};
-
-
-document.getElementById("button").addEventListener("click", recommend);
-document.addEventListener("keypress", BindEnter)
-function BindEnter(obj){ 
-    if (obj.keyCode === 13) recommend()
 };
 
 
