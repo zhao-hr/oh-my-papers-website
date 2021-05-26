@@ -12,23 +12,21 @@
 	</head>
 
 	<body>
-		<h1>
-			<img src="img/icon_book_left.jpeg" alt="" width="24px">
-			&nbsp Oh My Papers &nbsp;
-			<img src="img/icon_book_right.jpeg" alt="" width="24px">
-		</h1>
-		<h3>A Hybrid Context-aware Paper Recommendation System</h3>
-		<br>
-		<div>
-			<input id="input" placeholder=" Your Context Here"></input>
+		<hr>
+		<div class="search">
+			&nbsp;<img src="img/icon_book_right.jpeg" alt="" width="16px">&nbsp;
+			<strong>Oh My Papers</strong> &nbsp;&nbsp;
+			<input type="input" placeholder=" Your Context Here" id="input">
 			<button id="button">Search</button>
 		</div>
-		
-		<div>
-			<h2>Papers Recommended:</h2>
-		</div>
 
-		<div id="output" class="output" contenteditable="false"></div>
+		<div class="description">A Hybrid Context-aware Paper Recommendation System</div>
+
+		<hr>
+
+		<div class="recommend"><strong>Papers Recommended</strong></div>
+
+		<div class="output" id="output" contenteditable="false"></div>
 
 		<script type="text/javascript" src="script.js"></script>
 	</body>
