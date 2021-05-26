@@ -12,7 +12,7 @@ python3 src/test.py
 
 Then type "www.ohmypapers.com" in your browser, and you will be able to use this APP.
 
-![img](img/result.png)
+![img](img/test.png)
 
 In the above example, the front-end send a string "resnet" to the back-end.
 
