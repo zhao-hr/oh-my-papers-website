@@ -18,7 +18,7 @@ body{
     box-sizing: border-box;
     outline: 0;
     border: 1px rgb(64, 64, 64);
-    border-radius: 6px;
+    border-radius: 5px;
     border-style: solid;
 }
 
@@ -31,7 +31,7 @@ body{
     vertical-align: top;
     outline: none;
     border: 1px rgb(64, 64, 64);
-    border-radius: 6px;
+    border-radius: 5px;
     border-style: solid;
 }
 
@@ -65,4 +65,49 @@ body{
     border-radius: 4px;
     left: 50%;
     right: 50%;
+}
+
+.paper{
+    background-color: rgb(255, 252, 250);
+}
+
+.paper_title{
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
+
+.paper_author{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_venue{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_year{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_partition{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_abstract_description{
+    color: rgb(32, 32, 192);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_abstract{
+    color: rgb(32, 32, 32);
+    font-size: 12px;
+    float: none;
 }
