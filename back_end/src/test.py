@@ -23,13 +23,13 @@ async def run(websocket, path):
 
 def recommendation(input):
     if input == "resnet":
-        with open('data/resnet.json', 'r') as f:
+        with open('back_end/data/resnet.json', 'r') as f:
             obj = json.load(f)
         obj = json.dumps(obj)
         print(obj)
         return obj
     else:
-        with open('data/ohmypaper.json', 'r') as f:
+        with open('back_end/data/ohmypaper.json', 'r') as f:
             obj = json.load(f)
         obj = json.dumps(obj)
         print(obj)
