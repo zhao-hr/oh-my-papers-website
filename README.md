@@ -7,7 +7,7 @@ You can test the program locally through "PHPStudy". For example, you may create
 In "/phpstudy/WWW/www.ohmypapers.com/", run the following command:
 
 ~~~bash
-python3 src/test.py
+python3 back_end/src/test.py
 ~~~
 
 Then type "www.ohmypapers.com" in your browser, and you will be able to use this APP.
@@ -38,4 +38,4 @@ And the front-end should receive a string from the back-end in the format as fol
 ]'
 ~~~
 
-What should be paid attention is that the back-end in this repo is just a simple test. Detailed information about the simple test is shown in "data/test.md".
+What should be paid attention is that the back-end in this repo is just a simple test. Detailed information about the simple test is shown in "back_end/data/test.md".
