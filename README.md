@@ -10,7 +10,7 @@ In "/phpstudy/WWW/www.ohmypapers.com/", run the following command:
 python3 back_end/src/test.py
 ~~~
 
-Then type "www.ohmypapers.com" in your browser, and you will be able to use this APP.
+Then type "www.ohmypapers.com" in your browser, and you will be able to use this application.
 
 ![img](img/test.png)
 
