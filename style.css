@@ -5,9 +5,11 @@ body{
 
 .search{
     font-size: large;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     color: rgb(0, 0, 128);
+    left: 50%;
+    right: 50%;
 }
 
 .search input{
@@ -67,10 +69,13 @@ body{
     right: 50%;
 }
 
+.searching{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .paper{
     background-color: rgb(255, 252, 250);
-    font-family: 'Times New Roman', Times, serif;
-
+    font-family:'Times New Roman', Times, serif;
 }
 
 .paper_title{
