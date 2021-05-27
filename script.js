@@ -3,6 +3,8 @@ console.log("Prgram Starts");
 input = document.getElementById("input");
 button = document.getElementById("button");
 output = document.getElementById("output");
+searching = document.getElementById("searching")
+searching.style.display="none"
 var paper = new Array(10);
 var paper_title = new Array(10);
 var paper_author = new Array(10);
@@ -18,25 +20,23 @@ for (var i = 0; i < 10; ++i){
     paper_abstract[i] = document.getElementById("paper"+i+"_abstract");
     paper[i].style.display="none";
 }
-
 button.addEventListener("click", recommend);
 document.addEventListener("keypress", BindEnter);
-function BindEnter(obj){ 
-    if (obj.keyCode === 13) recommend();
-};
+function BindEnter(obj) { if (obj.keyCode === 13) recommend(); };
 
 
 var socket;
 var ws = new WebSocket("ws://127.0.0.1:10086/test");
 socket = ws;
-ws.onopen = function() {
-    console.log('Connected Successfully');
-};
+ws.onopen = function() { console.log('Connected Successfully'); };
+ws.onclose = function() { console.log('Connection Closed'); };
 
 ws.onmessage = function(evt) {
     var received_msg = evt.data;
     var obj = JSON.parse(received_msg);
+    obj = obj['inference'][0]['result']
     console.log('Receive \'' + received_msg + '\' from Server');
+    searching.style.display="none";
     for (i=0; i<10; ++i){
         if (obj[i] != undefined) {
             paper_title[i].innerHTML = obj[i].title;
@@ -53,15 +53,18 @@ ws.onmessage = function(evt) {
     }
 };
 
-ws.onclose = function() {
-    console.log('Connection Closed');
-};
-
 
 function recommend(){
     var input_value = input.value;
     if (input_value != ""){
-        console.log('Send \'' + input_value + '\' to Server')
-        socket.send(input_value)
+        var obj = {"inference": []};
+        obj["inference"].push({"context": input_value});
+        obj_string = JSON.stringify(obj);
+        console.log('Send \'' + obj_string + '\' to Server');
+
+        searching.style.display="";
+        for (var i=0; i<10; ++i) paper[i].style.display="none";
+        
+        socket.send(obj_string);
     }
 }
