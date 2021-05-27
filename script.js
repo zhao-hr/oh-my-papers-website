@@ -1,5 +1,7 @@
 console.log("Prgram Starts");
 
+var server_connected = 0;
+
 input = document.getElementById("input");
 button = document.getElementById("button");
 output = document.getElementById("output");
@@ -28,8 +30,14 @@ function BindEnter(obj) { if (obj.keyCode === 13) recommend(); };
 var socket;
 var ws = new WebSocket("ws://127.0.0.1:10086/test");
 socket = ws;
-ws.onopen = function() { console.log('Connected Successfully'); };
-ws.onclose = function() { console.log('Connection Closed'); };
+ws.onopen = function() { 
+    console.log('Connected Successfully'); 
+    server_connected = 1;
+};
+ws.onclose = function() { 
+    console.log('Connection Closed'); 
+    server_connected = 0;
+};
 
 ws.onmessage = function(evt) {
     var received_msg = evt.data;
@@ -54,7 +62,12 @@ ws.onmessage = function(evt) {
 };
 
 
-function recommend(){
+function recommend(){    
+    if (server_connected == 0) {
+        alert("Server Unconnected!");
+        return;
+    }
+
     var input_value = input.value;
     if (input_value != ""){
         var obj = {"inference": []};
