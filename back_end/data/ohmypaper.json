@@ -1,4 +1,5 @@
-[
+{"inference": 
+    [{"result": [
     {
         "title": "Oh My Paper",
         "author": "Galaxies, Dazz, Dream",
@@ -54,4 +55,4 @@
         "year": "2021",
         "abstract": "A Hybrid Context-aware Paper Recommendation System"
     }
-]
+]}]}
