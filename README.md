@@ -47,13 +47,11 @@ And the front-end should receive a string from the back-end in the format as fol
           "year": 2015, 
           "author": "C. Szegedy, W. Liu, Y. Jia, P. Sermanet, ..."
         }
+        ......
       ]
     }
   ]
 }'
 ~~~
-
-
-
 
 What should be paid attention is that the back-end in this repo is just a simple test. Detailed information about the simple test is shown in "back_end/test.md".
