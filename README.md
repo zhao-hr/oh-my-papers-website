@@ -2,7 +2,7 @@
 
 This is a front-end completion of "Oh My Papers".
 
-You can test the program locally through "PHPStudy". For example, you may create a local website with a domain name "www.ohmypapers.com" in "PHPStudy". Put all the files from this "front-end/" in your local path "/phpstudy/WWW/www.ohmypapers.com/".
+You can test the program locally through "PHPStudy". For example, you may create a local website with a domain name "www.ohmypapers.com" in "PHPStudy". Put all the files from "front-end/" in your local path "/phpstudy/WWW/www.ohmypapers.com/".
 
 Enter "back-end/". Download files from [oh-my-paper](shttps://github.com/Galaxies99/oh-my-papers) and put them in "back-end/". After training, run the following command:
 
