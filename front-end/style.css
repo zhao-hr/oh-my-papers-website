@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(255, 250, 245);
+    margin: 20px;
+}
+
+.search{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: rgb(0, 0, 128);
+    left: 50%;
+    right: 50%;
+}
+
+.search input{
+    background-color: rgb(255, 253, 251);
+    width: 600px;
+    height: 30px;
+    font-size: medium;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px rgb(64, 64, 64);
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.search button{
+    width: 72px; 
+    height: 30px;
+    background-color: rgb(255, 240, 128); 
+    text-align: center;
+    font-size: medium;
+    vertical-align: top;
+    outline: none;
+    border: 1px rgb(64, 64, 64);
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.description{
+    color: rgb(0, 64, 64);
+    text-align: left;
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 6px;
+}
+
+.recommend{
+    color: rgb(0, 0, 32);
+    text-align: center;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 6px;
+}
+
+.output{
+    border:1px solid #a0b3d6;
+    min-height: 420px;
+    font-size: medium;
+    padding: 4px;
+    color: #333;
+    background-color: rgb(255, 252, 250);
+    outline: 0; 
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 4px;
+    left: 50%;
+    right: 50%;
+}
+
+.searching{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paper{
+    background-color: rgb(255, 252, 250);
+    font-family:'Times New Roman', Times, serif;
+}
+
+.paper_title{
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
+
+.paper_author{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_venue{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_year{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_partition{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_abstract_description{
+    color: rgb(32, 32, 192);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_abstract{
+    color: rgb(32, 32, 32);
+    font-size: 12px;
+    float: none;
+}
