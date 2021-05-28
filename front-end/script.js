@@ -2,6 +2,13 @@ console.log("Prgram Starts");
 
 var server_connected = 0;
 
+fun1 = document.getElementById("fun1");
+fun2 = document.getElementById("fun2");
+page1 = document.getElementById("page1")
+page2 = document.getElementById("page2")
+page1.style.display="";
+page2.style.display="none";
+
 input = document.getElementById("input");
 button = document.getElementById("button");
 output = document.getElementById("output");
@@ -22,9 +29,36 @@ for (var i = 0; i < 10; ++i){
     paper_abstract[i] = document.getElementById("paper"+i+"_abstract");
     paper[i].style.display="none";
 }
+
+input2 = document.getElementById("input2");
+button2 = document.getElementById("button2");
+output2 = document.getElementById("output2");
+searching2 = document.getElementById("searching2")
+searching2.style.display="none"
+var paper2 = new Array(10);
+var paper_title2 = new Array(10);
+var paper_author2 = new Array(10);
+var paper_venue2 = new Array(10);
+var paper_year2 = new Array(10);
+var paper_abstract2 = new Array(10);
+for (var i = 0; i < 10; ++i){
+    paper2[i] = document.getElementById("paper"+i);
+    paper_title2[i] = document.getElementById("paper"+i+"_title");
+    paper_author2[i] = document.getElementById("paper"+i+"_author");
+    paper_venue2[i] = document.getElementById("paper"+i+"_venue");
+    paper_year2[i] = document.getElementById("paper"+i+"_year");
+    paper_abstract2[i] = document.getElementById("paper"+i+"_abstract");
+    paper2[i].style.display="none";
+}
+
+
 button.addEventListener("click", recommend);
+fun1.addEventListener("click", Page1);
+fun2.addEventListener("click", Page2);
 document.addEventListener("keypress", BindEnter);
 function BindEnter(obj) { if (obj.keyCode === 13) recommend(); };
+function Page1() { page1.style.display=""; page2.style.display="none"; };
+function Page2() { page1.style.display="none"; page2.style.display=""; };
 
 
 var socket;
