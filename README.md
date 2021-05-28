@@ -12,7 +12,7 @@ python3 back_end/src/run.py
 
 Then type "www.ohmypapers.com" in your browser, and you will be able to use this application.
 
-![img](img/test.png)
+![img]("front end"/img/test.png)
 
 In the above example, the front-end sends a string to the back-end in the format as follows:
 
