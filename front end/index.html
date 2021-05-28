@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="paper, recommendation, citation" />
+		<meta name="description" content="A Hybrid Context-aware Paper Recommendation System" />
+
+		<title>Oh My Papers</title>
+
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>	
+		<div class="search">
+			&nbsp;<img src="img/icon.jpeg" alt="" width="16px">&nbsp;
+			<strong>Oh My Papers</strong> &nbsp;
+			<input type="input" placeholder=" Your Context Here" id="input">
+			<button id="button">Search</button>
+		</div>
+
+		<div class="description">A Hybrid Context-aware Paper Recommendation System</div>
+
+		<hr>
+
+		<div class="recommend"><strong>Papers Recommended</strong></div>
+
+		<div class="output" id="output" contenteditable="false">
+			<div class="searching" id="searching">Searching ...</div>
+			
+			<div class="paper", id="paper0">
+				<div class="paper_title" id="paper0_title"></div>
+				<div class="paper_author" id="paper0_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper0_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper0_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper0_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper1">
+				<div class="paper_title" id="paper1_title"></div>
+				<div class="paper_author" id="paper1_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper1_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper1_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper1_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper2">
+				<div class="paper_title" id="paper2_title"></div>
+				<div class="paper_author" id="paper2_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper2_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper2_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper2_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper3">
+				<div class="paper_title" id="paper3_title"></div>
+				<div class="paper_author" id="paper3_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper3_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper3_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper3_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper4">
+				<div class="paper_title" id="paper4_title"></div>
+				<div class="paper_author" id="paper4_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper4_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper4_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper4_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper5">
+				<div class="paper_title" id="paper5_title"></div>
+				<div class="paper_author" id="paper5_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper5_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper5_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper5_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper6">
+				<div class="paper_title" id="paper6_title"></div>
+				<div class="paper_author" id="paper6_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper6_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper6_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper6_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper7">
+				<div class="paper_title" id="paper7_title"></div>
+				<div class="paper_author" id="paper7_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper7_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper7_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper7_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper8">
+				<div class="paper_title" id="paper8_title"></div>
+				<div class="paper_author" id="paper8_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper8_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper8_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper8_abstract"></div>
+			</div><br>
+
+			<div class="paper", id="paper9">
+				<div class="paper_title" id="paper9_title"></div>
+				<div class="paper_author" id="paper9_author"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_venue" id="paper9_venue"></div>
+				<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+				<div class="paper_year" id="paper9_year"></div><br>
+				<div class="paper_abstract_description">Abstract:&nbsp;</div>
+				<div class="paper_abstract" id="paper9_abstract"></div>
+			</div><br>
+		</div>
+
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
