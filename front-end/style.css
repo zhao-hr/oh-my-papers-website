@@ -1,285 +1,279 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="keywords" content="paper, recommendation, citation" />
-		<meta name="description" content="A Hybrid Context-aware Paper Recommendation System" />
+body{
+    background-color: rgb(255, 250, 245);
+    width: 1240px;
+    margin: 20px;
+}
 
-		<title>Oh My Papers</title>
+.nav{
+    width: 1000px;
+    height: 22px;
+    padding-bottom: 1px;
+}
 
-		<link rel="stylesheet" href="style.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	</head>
+.nav .none{
+    float: left;
+}
 
-	<body>	
-		<div class="nav">
-			<div class="none"><hr width="209px"></div>
-			<div class="fun1"><button id="fun1">Function1</button></div>
-			<div class="fun2"><button id="fun2">Function2</button></div>
-		</div>
+.nav .fun1{
+    text-align: center;
+    width: 72px;
+    height: 22px;
+    margin-right: 0;
+    float: left;
+}
 
-		<div id="page1">
-			<div class="headline">
-				<div class="img">&nbsp;<img src="img/icon.jpeg" alt="" width="24px">&nbsp;</div>
-				<div class="search"><strong>Oh My Papers</strong> &nbsp;</div>
-				<div class="input"><input type="input" placeholder=" Your Context Here" id="input"></div>
-				<div class="button"><button id="button">Search</button></div>
-			</div>
+.nav .fun2{
+    text-align: center;
+    width: 72px;
+    height: 22px;
+    margin-left: 0;
+    float: left;
+}
 
-			<div class="description">A Hybrid Context-aware Paper Recommendation System</div>
+.nav #fun1{
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    width: 72px;
+    height: 22px;
+    border: 1px rgb(128, 128, 128);
+    border-top-right-radius: 12px;
+    border-style: solid;
+    border-right-style: none;
+    margin-right: 0;
+}
 
-			<hr>
+.nav #fun2{
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    width: 72px;
+    height: 22px;
+    border: 1px rgb(128, 128, 128);
+    border-top-right-radius: 12px;
+    border-style: solid;
+    margin-left: 0;
+}
 
-			<div class="recommend"><strong>Papers Recommended</strong></div>
+.nav #fun1:active{
+    color: rgb(255, 255, 255);
+}
 
-			<div class="output" id="output" contenteditable="false">
-				<div class="searching" id="searching">Searching ...</div>
-				
-				<div class="paper", id="paper0">
-					<div class="paper_title" id="paper0_title"></div>
-					<div class="paper_author" id="paper0_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper0_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper0_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper0_abstract"></div>
-				</div><br>
+.nav #fun1:hover{
+    background-color: rgb(128, 128, 128);
+}
 
-				<div class="paper", id="paper1">
-					<div class="paper_title" id="paper1_title"></div>
-					<div class="paper_author" id="paper1_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper1_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper1_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper1_abstract"></div>
-				</div><br>
+.nav #fun2:active{
+    color: rgb(255, 255, 255);
+}
 
-				<div class="paper", id="paper2">
-					<div class="paper_title" id="paper2_title"></div>
-					<div class="paper_author" id="paper2_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper2_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper2_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper2_abstract"></div>
-				</div><br>
+.nav #fun2:hover{
+    background-color: rgb(128, 128, 128);
+}
 
-				<div class="paper", id="paper3">
-					<div class="paper_title" id="paper3_title"></div>
-					<div class="paper_author" id="paper3_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper3_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper3_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper3_abstract"></div>
-				</div><br>
+.headline{
+    width: 100%;
+}
 
-				<div class="paper", id="paper4">
-					<div class="paper_title" id="paper4_title"></div>
-					<div class="paper_author" id="paper4_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper4_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper4_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper4_abstract"></div>
-				</div><br>
+.img{
+    float: left;
+}
 
-				<div class="paper", id="paper5">
-					<div class="paper_title" id="paper5_title"></div>
-					<div class="paper_author" id="paper5_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper5_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper5_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper5_abstract"></div>
-				</div><br>
+.search{
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: rgb(0, 0, 128);
+    margin-right: 0;
+    float: left;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
 
-				<div class="paper", id="paper6">
-					<div class="paper_title" id="paper6_title"></div>
-					<div class="paper_author" id="paper6_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper6_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper6_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper6_abstract"></div>
-				</div><br>
+.input{
+    width: auto;
+    float:left;
+}
 
-				<div class="paper", id="paper7">
-					<div class="paper_title" id="paper7_title"></div>
-					<div class="paper_author" id="paper7_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper7_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper7_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper7_abstract"></div>
-				</div><br>
+.button{
+    float: none;
+    margin-left: auto;
+    margin-right: 0;
+}
 
-				<div class="paper", id="paper8">
-					<div class="paper_title" id="paper8_title"></div>
-					<div class="paper_author" id="paper8_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper8_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper8_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper8_abstract"></div>
-				</div><br>
+.input input{
+    background-color: rgb(255, 253, 251);
+    width: 950px;
+    height: 30px;
+    font-size: medium;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px rgb(128, 128, 128);
+    border-bottom-left-radius: 6px;
+    border-style: solid;
+}
 
-				<div class="paper", id="paper9">
-					<div class="paper_title" id="paper9_title"></div>
-					<div class="paper_author" id="paper9_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper9_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper9_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper9_abstract"></div>
-				</div>
-			</div>
-		</div>
+.button button{
+    width: 72px; 
+    height: 30px;
+    background-color: rgb(255, 240, 128); 
+    text-align: center;
+    font-size: medium;
+    vertical-align: top;
+    outline: none;
+    border: 1px rgb(128, 128, 128);
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-style: solid;
+    border-left-style: none;
+    margin-right: 0;
+}
 
-		<div id="page2">
-			<div class="headline">
-				<div class="img">&nbsp;<img src="img/icon.jpeg" alt="" width="24px">&nbsp;</div>
-				<div class="search"><strong>Oh My Papers</strong> &nbsp;</div>
-				<div class="input"><input type="input" placeholder=" Your Context Here" id="input2"></div>
-				<div class="button"><button id="button2">Search</button></div>
-			</div>
+.button button:hover{
+    background-color: rgb(128, 110, 48); 
+}
 
-			<div class="description">A Hybrid Context-aware Paper Recommendation System</div>
+.button button:active{
+    color:rgb(255, 255, 255);
+}
 
-			<hr>
+.description{
+    color: rgb(0, 64, 64);
+    text-align: left;
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 6px;
+}
 
-			<div class="recommend"><strong>Papers Recommended in Section II</strong></div>
+.recommend{
+    color: rgb(0, 0, 32);
+    text-align: center;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 6px;
+}
 
-			<div class="output2" id="output2_1" contenteditable="false">
-				<div class="searching" id="searching2">Searching ...</div>
-				
-				<div class="paper", id="paper0">
-					<div class="paper_title" id="paper0_title"></div>
-					<div class="paper_author" id="paper0_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper0_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper0_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper0_abstract"></div>
-				</div><br>
+.output{
+    border:1px solid #a0b3d6;
+    min-height: 420px;
+    font-size: medium;
+    padding: 4px;
+    color: #333;
+    background-color: rgb(255, 252, 250);
+    outline: 0; 
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 4px;
+}
 
-				<div class="paper", id="paper1">
-					<div class="paper_title" id="paper1_title"></div>
-					<div class="paper_author" id="paper1_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper1_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper1_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper1_abstract"></div>
-				</div><br>
+.output2{
+    border:1px solid #a0b3d6;
+    min-height: 100px;
+    font-size: medium;
+    padding: 4px;
+    color: #333;
+    background-color: rgb(255, 252, 250);
+    outline: 0; 
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 4px;
+}
 
-				<div class="paper", id="paper2">
-					<div class="paper_title" id="paper2_title"></div>
-					<div class="paper_author" id="paper2_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper2_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper2_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper2_abstract"></div>
-				</div><br>
+#output2_1{
+    min-height: 100px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-				<div class="paper", id="paper3">
-					<div class="paper_title" id="paper3_title"></div>
-					<div class="paper_author" id="paper3_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper3_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper3_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper3_abstract"></div>
-				</div><br>
+#output2_2{
+    min-height: 300px
+}
 
-				<div class="paper", id="paper4">
-					<div class="paper_title" id="paper4_title"></div>
-					<div class="paper_author" id="paper4_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper4_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper4_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper4_abstract"></div>
-				</div><br>
+.searching{
+    font-family: 'Times New Roman', Times, serif;
+}
 
-				<div class="paper", id="paper5">
-					<div class="paper_title" id="paper5_title"></div>
-					<div class="paper_author" id="paper5_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper5_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper5_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper5_abstract"></div>
-				</div><br>
+.paper{
+    background-color: rgb(255, 252, 250);
+    font-family:'Times New Roman', Times, serif;
+}
 
-				<div class="paper", id="paper6">
-					<div class="paper_title" id="paper6_title"></div>
-					<div class="paper_author" id="paper6_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper6_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper6_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper6_abstract"></div>
-				</div><br>
+.paper_title{
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
 
-				<div class="paper", id="paper7">
-					<div class="paper_title" id="paper7_title"></div>
-					<div class="paper_author" id="paper7_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper7_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper7_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper7_abstract"></div>
-				</div><br>
+.paper_author{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+    padding-top: 4px;
+}
 
-				<div class="paper", id="paper8">
-					<div class="paper_title" id="paper8_title"></div>
-					<div class="paper_author" id="paper8_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper8_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper8_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper8_abstract"></div>
-				</div><br>
+.paper_venue{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+    padding-top: 4px;
+}
 
-				<div class="paper", id="paper9">
-					<div class="paper_title" id="paper9_title"></div>
-					<div class="paper_author" id="paper9_author"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_venue" id="paper9_venue"></div>
-					<div class="paper_partition">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
-					<div class="paper_year" id="paper9_year"></div><br>
-					<div class="paper_abstract_description">Abstract:&nbsp;</div>
-					<div class="paper_abstract" id="paper9_abstract"></div>
-				</div>
-			</div>
+.paper_year{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+    padding-top: 4px;
+}
 
-			<div class="output2" id="output2_2" contenteditable="false">
+.paper_relate{
+    height: 11px;
+}
 
-			</div>
-		</div>
+.paper_relate button{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 9px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(128, 0, 0);
+    line-height: 11px;
+    background-color: rgb(255, 252, 250);
+    border-style: none;
+}
 
-		<script type="text/javascript" src="script.js"></script>
-	</body>
-</html>
+.paper_relate button:hover{
+    text-align: center;
+    font-size: 9px;
+    color: rgb(255, 0, 255);
+    line-height: 11px;
+    background-color: rgb(255, 252, 250);
+    border-style: none;
+}
+
+.paper_relate button:active{
+    text-align: center;
+    font-size: 9px;
+    color: rgb(128, 128, 128);
+    line-height: 11px;
+    background-color: rgb(255, 252, 250);
+    border-style: none;
+}
+
+.paper_partition{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+    padding-top: 4px;
+}
+
+.paper_abstract_description{
+    color: rgb(32, 32, 192);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_abstract{
+    color: rgb(32, 32, 32);
+    font-size: 12px;
+}
