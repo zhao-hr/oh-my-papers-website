@@ -38,10 +38,12 @@ var input2 = document.getElementById("input2");
 var button2 = document.getElementById("button2");
 var output2_1 = document.getElementById("output2_1");
 var output2_2 = document.getElementById("output2_2");
+var output_box = document.getElementById("output_box2");
 var searching2 = document.getElementById("searching2");
 var searching3 = document.getElementById("searching3");
 searching2.style.display="none";
 searching3.style.display="none";
+output_box.style.display="none";
 var paper2 = new Array(10);
 var paper_title2 = new Array(10);
 var paper_author2 = new Array(10);
@@ -123,11 +125,14 @@ function msg_display(obj) {
         console.log('Receive \'' + obj + '\' from Server');
         output2_1.innerHTML = obj["context"];
         obj = obj['references'];
+        output2_1.style.display="";
+        output_box.style.display="";
         searching2.style.display="none";
         searching3.style.display="none";
         for (i=0; i<10; ++i){
             if (obj[i] != undefined) {
-                paper_title2[i].innerHTML = obj[i].title;
+                j = i+1;
+                paper_title2[i].innerHTML = "[" + j + "] " + obj[i].title;
                 paper_author2[i].innerHTML = obj[i].author;
                 paper_venue2[i].innerHTML = obj[i].venue;
                 paper_year2[i].innerHTML = obj[i].year;
@@ -192,6 +197,9 @@ function msg_send(){
 
             searching2.style.display="";
             searching3.style.display="";
+            
+            output2_1.style.display="none";
+            output_box.style.display="none";
             for (var i=0; i<10; ++i) paper2[i].style.display="none";
 
             socket.send(obj_string)
