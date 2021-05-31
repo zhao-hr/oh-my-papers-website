@@ -12,6 +12,16 @@ python3 run.py
 
 Then type "www.ohmypapers.com" in your browser, and you will be able to use this application.
 
-![img](front-end/img/test.png)
+### Context Inference
+
+![img](front-end/img/context.gif)
+
+### Relation Inference
+
+![img](front-end/img/relation.gif)
+
+### Citation Inference
+
+![img](front-end/img/citation.gif)
 
 Some detailed information can be shown in [docs/front-end.md](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/front-end.md) and [docs/back-end.md](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/back-end.md)
