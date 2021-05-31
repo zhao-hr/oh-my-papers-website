@@ -103,11 +103,12 @@ body{
     margin-right: 0;
 }
 
-.input input{
+.input #input{
     background-color: rgb(255, 253, 251);
     width: 950px;
     height: 30px;
     font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
     outline: 0;
     border: 1px rgb(128, 128, 128);
@@ -115,7 +116,7 @@ body{
     border-style: solid;
 }
 
-.button button{
+.button #button{
     width: 72px; 
     height: 30px;
     background-color: rgb(255, 240, 128); 
@@ -182,14 +183,14 @@ body{
     border-radius: 4px;
 }
 
-#output2_1{
+#output_box{
     min-height: 100px;
     margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
 }
 
 #output2_2{
-    min-height: 300px
+    min-height: 250px
 }
 
 .searching{
@@ -267,6 +268,30 @@ body{
     padding-top: 4px;
 }
 
+.paper_author2{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_venue2{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_year2{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
+.paper_partition2{
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+    float: left;
+}
+
 .paper_abstract_description{
     color: rgb(32, 32, 192);
     font-size: 12px;
@@ -276,4 +301,55 @@ body{
 .paper_abstract{
     color: rgb(32, 32, 32);
     font-size: 12px;
+}
+
+.img2{
+    float: left;
+    padding-top: 20px;
+}
+
+.search2{
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: rgb(0, 0, 128);
+    margin-right: 0;
+    float: left;
+    padding-top: 20px;
+    padding-left: 3px;
+}
+
+.input2{
+    float: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input2 textarea{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom-left-radius: 6px;
+    font-size: medium;
+}
+
+.button2 button{
+    width: 72px; 
+    height: 79px;
+    background-color: rgb(255, 240, 128); 
+    text-align: center;
+    font-size: medium;
+    vertical-align: top;
+    outline: none;
+    border: 1px rgb(128, 128, 128);
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-style: solid;
+    border-left-style: none;
+    margin-right: 0;
+}
+
+.button2 button:hover{
+    background-color: rgb(128, 110, 48); 
+}
+
+.button2 button:active{
+    color:rgb(255, 255, 255);
 }
