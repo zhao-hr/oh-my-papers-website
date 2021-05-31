@@ -55,16 +55,17 @@ The front-end should receive a string from the back-end in the format as follows
 When you type in a string, the front-end will send a string to back-end in the format as follows:
 
 ~~~
-{
+'{
   "function": 2,
   "context": "Resnet [?] is a well-built neural network, which has been widely used in many deep learning fields. Yolo [?] is a famous object detection framework, who have reached the state-of-the-art in many fields. AlphaPose [?] is a pose estimation framework proposed by MVIG lab in Shanghai Jiao Tong University."
-}
+}'
 ~~~
 
 The front-end should receive a string from the back-end in the format as follows:
 
 ~~~
-{
+'{
+  "function": 2,
   "context": "Resnet [1] is a well-built neural network, which has been widely used in many deep learning fields. Yolo [2] is a famous object detection framework, who have reached the state-of-the-art in many fields. AlphaPose [3] is a pose estimation framework proposed by MVIG lab in Shanghai Jiao Tong University.", 
   "references": [
     {
@@ -92,5 +93,41 @@ The front-end should receive a string from the back-end in the format as follows
       "id": 2496
     }
   ]
-}
+}'
+~~~
+
+## Function 2: Relation Inference
+
+When you click "Related Papers", the front-end will send a string to back-end in the format as follows:
+
+~~~
+'{
+  "function": 3,
+  "id": 65
+}'
+~~~
+
+The front-end should receive a string from the back-end in the format as follows:
+
+~~~
+{
+  "result": [
+    {
+      "title": "Adversarial examples for semantic segmentation and object detection", 
+      "abstract": "It has been well demonstrated that adversarial examples...", 
+      "venue": "ICCV", 
+      "author": "C. Xie, J. Wang, Z. Zhang, Y. Zhou, L. Xie, A. Yuille", 
+      "year": 2017, 
+      "id": 2844}, 
+    {
+      "title": "Batch normalization: Accelerating deep network training by reducing internal covariate shift", 
+      "abstract": "Training Deep Neural Networks is complicated by the fact that the distributio...", 
+      "venue": "ICML", 
+      "author": "S. Ioffe, C. Szegedy", 
+      "year": 2015, 
+      "id": 267
+    },
+    ...
+  ]
+}'
 ~~~
