@@ -1,6 +1,6 @@
 # Back-End
 
-In this repo, "back-end/run.py" will be used to communicate with the front-end and call the inference function. The implementation of inference can be downloaded from [oh-my-paper](https://github.com/Galaxies99/oh-my-papers). Put the downloaded files in "back-end/". After training, run the following command to start the back-end.
+In this repo, "back-end/run.py" will be used to communicate with the front-end and call the inference function. The implementation of inference can be downloaded from [oh-my-papers](https://github.com/Galaxies99/oh-my-papers). Put the downloaded files in "back-end/". After training, run the following command to start the back-end.
 
 ~~~bash
 python3 run.py
