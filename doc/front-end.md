@@ -111,6 +111,7 @@ The front-end should receive a string from the back-end in the format as follows
 
 ~~~
 {
+  "function": 3,
   "result": [
     {
       "title": "Adversarial examples for semantic segmentation and object detection", 
