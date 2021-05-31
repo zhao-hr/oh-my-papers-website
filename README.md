@@ -14,4 +14,4 @@ Then type "www.ohmypapers.com" in your browser, and you will be able to use this
 
 ![img](front-end/img/test.png)
 
-Some detailed information can be shown in [docs/front-end.md](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/front-end.md) and [docs/back-end](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/back-end.md)
+Some detailed information can be shown in [docs/front-end.md](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/front-end.md) and [docs/back-end.md](https://github.com/zhao-hr/oh-my-papers-website/blob/main/docs/back-end.md)
